@@ -1,0 +1,68 @@
+{
+        name: "TCB",
+        date: "today",
+        time: "10:45PM",
+        address: {
+            No: "this is num",
+            Street: "this is street",
+            city: "chennai",
+            country: "india"
+        },
+        image: "img/ang.png",
+        sessions: [
+          {
+            id: 1,
+            name: 'Controller',
+            trainerName: "delhi Ganesh",
+            duration: 2,
+            level: "Advanced",
+            abstract: "In this session you will learh the ins and out of the controller",
+            vote: 89,
+          },
+          {
+            id:2,
+            name: 'Directive',
+            trainerName: "Idiot Vishal",
+            duration: 1,
+            level: "intermediate",
+            abstract: "In this session you will learh the ins and out of the controller",
+            vote: 2,
+          },
+            {
+                id:3,
+                name: 'Module',
+                trainerName: "Satish Mama",
+                duration: 4,
+                level: "Introductory",
+                abstract: "In this session you will learh the ins and out of the controller",
+                vote: 1,
+            },
+            {
+                id:4,
+                name: 'USB',
+                trainerName: "sakara",
+                duration: 3,
+                level: "Expert",
+                abstract: "In this session you will learh the ins and out of the controller",
+                vote: 25,
+            },
+            {
+                id:5,
+                name: 'WatterBottle (Yellow color)',
+                trainerName: "lakhani",
+                duration: 3,
+                level: "Introductory",
+                abstract: "In this session you will learh the ins and out of the controller",
+                vote: 102,
+            },
+            {
+                id:6,
+                name: 'Pen Drive',
+                trainerName: "raghul",
+                duration: 2,
+                level: "Advanced",
+                abstract: "In this session you will learh the ins and out of the controller",
+                vote: 5,
+            }
+        ]
+    }

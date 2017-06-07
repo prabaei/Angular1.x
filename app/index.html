@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <script src="angular-1.6.4/angular.js"></script>
+      <script src="angular-1.6.4/angular-resource.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body ng-app="event">
+    <div ng-controller="ctrl">
+        <a href="newevent.html">Create Event</a>
+        <img ng-src="{{events.image}}"/>
+        <h2>{{events.name}}</h2>
+        <h4>{{events.date}}</h4>
+        <h4>{{events.time}}</h4>
+        <address>
+            {{events.address.No}}<br/> {{events.address.Street}}
+            <br/> {{events.address.city}}
+            <br/> {{events.address.country}}
+        </address>
+        <button ng-click="scrolltosection()">scroll</button>
+        <select ng-model="sordorder">
+            <option selected value="name">Name</option>
+            <option selected value="vote">vote</option>
+        </select>
+        <select ng-model="query.level">
+            <option value="">All</option>
+            <option value="Introductory">Introductory</option>
+            <option value="Expert">Expert</option>
+            <option value="intermediate">intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+        <div>
+            <ul>
+                <li ng-repeat="session in events.sessions | orderBy:sordorder | filter:query | limitTo:8" >
+                <button ng-click="upvote(session)">U</button> {{session.vote}} <button ng-click="downvote(session)">D</button>   <h3 id="session{{session.id}}">{{session.name}}</h3>
+                    <P>Trainer : {{session.trainerName}}</P>
+                    <P>Duration: {{session.duration | durations}}</P>
+                    <p>Level: {{session.level}}</p> 
+                    <p>Abstract: {{session.abstract}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
