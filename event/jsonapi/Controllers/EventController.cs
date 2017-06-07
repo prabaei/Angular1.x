@@ -14,7 +14,9 @@ namespace jsonapi.Controllers
         public JToken Get([FromUri]string id = null)
         {
             var path = System.Web.Hosting.HostingEnvironment.MapPath("/");
-            return JObject.Parse(File.ReadAllText(path + "/data/" + id + ".json"));
+
+
+            return JObject.Parse(File.ReadAllText(path + "../../data/" + id + ".json"));
         }
     }
 }
